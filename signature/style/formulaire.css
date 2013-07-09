@@ -1,0 +1,30 @@
+
+table
+{
+	border-collapse:collapse;
+} 
+
+.PictureHidden {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+}
+
+.PictureVisible {
+  text-align: center;
+  display: inline;
+  visibility: visible;
+  z-index: 2;
+  vertical-align:middle;
+}
+
+.PictureVisible img  {
+  padding : 10px 0 20px 30px;
+}
+
+.erreur{
+  font-size:10px;
+  font-weight:bold;
+  color:#FF0000;
+}
