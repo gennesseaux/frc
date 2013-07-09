@@ -4,7 +4,7 @@
 	include('./common/arrayhelper.php');
 	include('./common/stringhelper.php');
 	
-	EnTeteHTML5('Planetside 2 items', '', '');
+	html5helper::EnTete('Planetside 2 items', '', '');
 ?>
 
 <!-- Ajout de styles -->
@@ -24,7 +24,7 @@ td, th {
 	<?php
 		// Intérogation de l'API de planetside 2 pour récupérer la list des items
 		//$json = file_get_contents('http://census.soe.com/get/ps2-beta/icon.attachment?c:start=0&c:limit=10&c:show=owner_id,description,extension&c:sort=owner_id');
-		$json = file_get_contents('http://census.soe.com/get/ps2-beta/icon.attachment?c:start=0&c:limit=10000&c:show=owner_id,description,extension&c:sort=owner_id');
+		$json = file_get_contents('http://census.soe.com/s:H41/get/ps2/icon.attachment?c:start=0&c:limit=10000&c:show=owner_id,description,extension&c:sort=owner_id');
 		$jsonObject = json_decode($json);
 		$Icones = $jsonObject->{'icon.attachment_list'};
 				
@@ -33,7 +33,7 @@ td, th {
 		{	
 			$id = $value->owner_id;
 			$fichier = $value->description.'.'.$value->extension;
-			$url = 'http://census.soe.com/img/ps2-beta/icon/'.$id.'/item';
+			$url = 'http://census.soe.com/s:H41/img/ps2/icon/'.$id.'/item';
 				
 			/*if(contains($value->description,'spawn')==false) {
 				continue;
@@ -58,4 +58,4 @@ td, th {
 
 
 <!-- Déclaration de fin de la page html5 -->
-<?php FinFichierHTML5(); ?>
+<?php html5helper::FinFichier(); ?>
