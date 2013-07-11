@@ -97,7 +97,8 @@
 	if($UserId>0 && $outfit && $outfit->id==$FrcId) 
 	{
 		// Intérogation de l'API de planetside 2
-		$json = file_get_contents('https://census.soe.com/'.$ServiceId.'/get/ps2/single_character_by_id/?character_id='.$UserId);
+		$url = 'https://census.soe.com/'.$ServiceId.'/get/ps2/single_character_by_id/?character_id='.$UserId;
+		$json = file_get_contents($url);
 		$json = preg_replace('/,\s*([\]}])/m', '$1', utf8_encode($json));
 		$jsonObject = json_decode($json);
 		
