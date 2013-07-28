@@ -1,5 +1,11 @@
 /**
- * 	Script de gestion du formulaire de signature
+ * 
+ *		Jocelyn GENNESSEAUX (hyperjoce)
+ * 
+ *		Script de gestion du formulaire de signature
+ * 
+ *		License : CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0/fr/legalcode)
+ * 
  */
 
 /**

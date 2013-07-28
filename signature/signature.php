@@ -1,4 +1,24 @@
-<?php
+/**
+ * 
+ *		Jocelyn GENNESSEAUX (hyperjoce)
+ * 
+ *		Image de la signature
+ * 
+ *  	cette signature affiche :
+ *   		- le BR
+ *   		- le nombre d'XP
+ *   		- le kill death ratio
+ *   		- les trois classes les plus utilisées
+ *   		- les deux véhicules les plus utiliséq
+ *   		- le meilleur score de la première classe
+ *   		- le meilleur score du premier véhicule
+ * 
+ *		License : CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0/fr/legalcode)
+ * 
+ */
+
+ 
+ <?php
 	// Inclusions 
 	include('../common/imagehelper.php');
 	include('../common/arrayhelper.php');

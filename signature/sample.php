@@ -1,3 +1,14 @@
+/**
+ * 
+ *		Jocelyn GENNESSEAUX (hyperjoce)
+ * 
+ *		Page d'exemple de signatures
+ * 
+ *		License : CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0/fr/legalcode)
+ * 
+ */
+
+
 <!-- Déclaration de l'en-tête de la page html5 -->
 <?php
 	include('../common/html5helper.php');

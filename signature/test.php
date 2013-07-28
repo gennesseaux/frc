@@ -1,4 +1,15 @@
-<?php
+/**
+ * 
+ *		Jocelyn GENNESSEAUX (hyperjoce)
+ * 
+ *		page de test
+ * 
+ *		License : CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0/fr/legalcode)
+ * 
+ */
+
+ 
+ <?php
 	
 	// Intérogation de l'API de planetside 2
 	//$url = 'https://census.soe.com/get/ps2/single_character_by_id/?c:start=0&c:limit=1000&id=5428026242696699825';

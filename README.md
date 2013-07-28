@@ -1,5 +1,5 @@
-
-Signature FRC - Un générateur de signature pour les membres de la FRC www.planetside.fr
+# Signature FRC
+Un générateur de signature pour les membres de la FRC www.planetside.fr
 
 Cette signature est destinée au membres de la FRC.
 
@@ -13,3 +13,7 @@ Cette signature affiche :
   - les deux véhicules les plus utiliséq
   - le meilleur score de la première classe
   - le meilleur score du premier véhicule
+
+## License
+
+[CC BY 3.0 FR](http://creativecommons.org/licenses/by/3.0/fr/legalcode)
