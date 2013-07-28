@@ -1,6 +1,6 @@
 /**
  * 
- *		Jocelyn GENNESSEAUX (hyperjoce)
+ *		Jocelyn GENNESSEAUX (hyperjoce - French Connection - www.planetside.fr)
  * 
  *		Image de la signature
  * 

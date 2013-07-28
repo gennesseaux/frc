@@ -1,7 +1,7 @@
 /**
  * 
- *		Jocelyn GENNESSEAUX (hyperjoce)
- * 
+ *		Jocelyn GENNESSEAUX (hyperjoce - French Connection - www.planetside.fr)
+  * 
  *		Page d'exemple de signatures
  * 
  *		License : CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0/fr/legalcode)

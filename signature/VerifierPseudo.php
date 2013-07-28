@@ -1,7 +1,7 @@
 /**
  * 
- *		Jocelyn GENNESSEAUX (hyperjoce)
- * 
+ *		Jocelyn GENNESSEAUX (hyperjoce - French Connection - www.planetside.fr)
+  * 
  *		Page utilisée par le formulaire permettant de tester si le pseudo appartient à un membre de la FRC
  * 
  *		License : CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0/fr/legalcode)
@@ -12,7 +12,6 @@
  <?php
 	// Inclusions
 	include('../common/stringhelper.php');
-
 
 	//
 	$result = "Aucune donnée à vérifer";
