@@ -14,26 +14,26 @@
 var xhr = null;
 
 /**
- * 	Vérifie que le pseudo saisi correspond bien à un membre de la FRC
+ * 	Vï¿½rifie que le pseudo saisi correspond bien ï¿½ un membre de la FRC
  */
 function VerifierPseudo()
 {
-	// Test si une requête est en cours et l'annule
+	// Test si une requï¿½te est en cours et l'annule
 	if (xhr && xhr.readyState != 0) { xhr.abort(); }
 	
-	// Début d'une nouvelle requête
+	// Dï¿½but d'une nouvelle requï¿½te
 	xhr = getXMLHttpRequest();
 	var pseudo = document.getElementById("pseudo").value;
 
 	xhr.onreadystatechange = function()
 	{
-		// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
+		// On ne fait quelque chose que si on a tout reï¿½u et que le serveur est ok
         if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0))
         {
  	    	var result = xhr.responseText.trim();
  
 	    	if(result === "OK")	{ PseudoValide(); }
-	    	else				{ PseudoNonValide(result); }
+	    	else				{ PseudoNonValide(); }
         }
         
         //On affiche l'image de chargement
@@ -45,7 +45,7 @@ function VerifierPseudo()
 
 	xhr.open("GET", "VerifierPseudo.php?pseudo=" + pseudo, true);
 	xhr.send(null);
-};
+}
 
 
 /**
@@ -62,13 +62,13 @@ function ChargementEnCours()
 	// On cache les images imgOk et imgErreur
 	document.getElementById("imgOK").className = 'PictureHidden';
 	document.getElementById("imgErreur").className = 'PictureHidden';
-};
+}
 
 
 /**
  * 	Le pseudo saisie n'est pas valide
  */
-function PseudoNonValide(message)
+function PseudoNonValide()
 {
 	// On se sert de innerHTML pour afficher le resultat (erreur)
 	//document.getElementById("errorText").innerHTML = message;
@@ -80,9 +80,9 @@ function PseudoNonValide(message)
 	document.getElementById("imgOK").className = 'PictureHidden';
 	document.getElementById("imgErreur").className = 'PictureVisible';
 
-	// Mise à jour de la signature
+	// Mise ï¿½ jour de la signature
 	UpdateSignature();
-};
+}
 
 
 /**
@@ -100,9 +100,9 @@ function PseudoValide()
 	document.getElementById("imgOK").className = 'PictureVisible';
 	document.getElementById("imgErreur").className = 'PictureHidden';
 
-	// Mise à jour de la signature
+	// Mise ï¿½ jour de la signature
 	UpdateSignature();
-};
+}
 
 
 function UpdateSignature()
@@ -115,13 +115,13 @@ function UpdateSignature()
 	var img		= document.getElementById('imgSignature');
 	
 	//
-	// Création de l'url
+	// Crï¿½ation de l'url
 	//var url = 'http://localhost/frc/signature/signature.php?pseudo=' + pseudo + '&br=' + br + '&xp=' + xp + '&kd=' + kd + '&fond=' + fond;
-	url = location.href;
+	var url = location.href;
 	url = url.substring(0,url.lastIndexOf('/')+1);
 	url = url + 'signature.php?pseudo=' + pseudo + '&br=' + br + '&xp=' + xp + '&kd=' + kd + '&fond=' + fond;
 	
-	// Mise à jour de l'image
+	// Mise ï¿½ jour de l'image
 	img.src = url;
 	
 	//
