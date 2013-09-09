@@ -84,12 +84,12 @@
         $pseudo = strtolower($Pseudo);
 
         // Int�rogation de l'API de planetside 2
-        $url = 'https://census.soe.com/'.$ServiceId.'/get/ps2/character?c:resolve=outfit&c:hide=battle_rank,certs,daily_ribbon,times&name.first_lower='.$pseudo.',outfit.id='.$FrcId;
+        $url = 'http://census.soe.com/'.$ServiceId.'/get/ps2/character?c:resolve=outfit&c:hide=battle_rank,certs,daily_ribbon,times&name.first_lower='.$pseudo.',outfit.id='.$FrcId;
         $json = file_get_contents($url);
         $json = preg_replace('/,\s*([\]}])/m', '$1', utf8_encode($json));
         $jsonObject = json_decode($json);
 
-        if(count($jsonObject->character_list)==1 && contains($json, $FrcId))
+        if( contains($json, 'character_list') && count($jsonObject->character_list)==1 && contains($json, $FrcId))
         {
             $UserId = $jsonObject->character_list[0]->character_id;
             $outfit = $jsonObject->character_list[0]->outfit;
@@ -102,7 +102,7 @@
         $UserId = $_GET["id"];
 
         // Int�rogation de l'API de planetside 2
-        $url = 'https://census.soe.com/'.$ServiceId.'/get/ps2/character?c:resolve=outfit&c:hide=battle_rank,certs,daily_ribbon,times&id='.$UserId;
+        $url = 'http://census.soe.com/'.$ServiceId.'/get/ps2/character?c:resolve=outfit&c:hide=battle_rank,certs,daily_ribbon,times&id='.$UserId;
         $json = file_get_contents($url);
         $json = preg_replace('/,\s*([\]}])/m', '$1', utf8_encode($json));
         $jsonObject = json_decode($json);
@@ -120,7 +120,7 @@
     if($UserId>0 && $outfit && $outfit->outfit_id==$FrcId)
     {
         // Int�rogation de l'API de planetside 2
-        $url = 'https://census.soe.com/'.$ServiceId.'/get/ps2/single_character_by_id/?character_id='.$UserId;
+        $url = 'http://census.soe.com/'.$ServiceId.'/get/ps2/single_character_by_id/?character_id='.$UserId;
         $json = file_get_contents($url);
         $json = preg_replace('/,\s*([\]}])/m', '$1', utf8_encode($json));
         $jsonObject = json_decode($json);

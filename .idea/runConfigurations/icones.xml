@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="icones" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" singleton="true" server_name="localhost" start_url="/frc/icones.php">
+    <RunnerSettings RunnerId="PhpWebAppDebugRunner" />
+    <ConfigurationWrapper RunnerId="PhpWebAppDebugRunner" />
+    <method />
+  </configuration>
+</component>

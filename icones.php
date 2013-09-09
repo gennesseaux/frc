@@ -51,6 +51,19 @@ td, th {
 			</td>
 			<td><img src="<?php echo $url ?>" alt="<?php echo $fichier ?>" /></td>
 			</tr>
+
+            <?php
+
+            /*
+            // Copie le fichier localement
+            $dir = 'downloads/';
+            $content = file_get_contents($url);
+            $fp = fopen($dir.$id.'_'.$fichier, "w");
+            fwrite($fp, $content);
+            fclose($fp);
+            */
+
+            ?>
 		<?php }	
 		
 	?>
