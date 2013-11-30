@@ -165,6 +165,30 @@
         };
         imagettftext($fond, 10, 0, 10, 105, $blanc, $fontReg, $score);
 
+        $formation = "";
+        $AddWolf = ( (isset($_GET["w"]) and $_GET["w"]>=1) );
+        $AddRhino = ( (isset($_GET["r"]) and $_GET["r"]>=1) );
+        $AddEagle = ( (isset($_GET["e"]) and $_GET["e"]>=1) );
+        if($AddWolf) {
+            $formation = "Wolf ".$_GET["w"];
+            $icoWolf=imagecreatefrompng("./icone/wolfwhite18.png");
+            imagecopymerge_alpha($fond, $icoWolf, 410, 91, 0, 0, imagesx($icoWolf), imagesy($icoWolf),100);
+            imagettftext($fond, 10, 0, 430, 105, $blanc, $fontReg, $formation);
+        };
+        if($AddRhino) {
+            $formation = "Rhino ".$_GET["r"];
+            $icoRhino=imagecreatefrompng("./icone/rhinowhite18.png");
+            imagecopymerge_alpha($fond, $icoRhino, 490, 91, 0, 0, imagesx($icoRhino), imagesy($icoRhino),100);
+            imagettftext($fond, 10, 0, 510, 105, $blanc, $fontReg, $formation);
+        };
+        if($AddEagle) {
+            $formation ="Eagle".$_GET["e"];
+            $icoEagle=imagecreatefrompng("./icone/eaglewhite18.png");
+            imagecopymerge_alpha($fond, $icoEagle, 570, 91, 0, 0, imagesx($icoEagle), imagesy($icoEagle),100);
+            imagettftext($fond, 10, 0, 590, 105, $blanc, $fontReg, $formation);
+        };
+
+
         // Scores et temps de jeux par classe
         $aClasseScore = array();
         $aClassePlayTime = array();

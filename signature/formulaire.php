@@ -2,7 +2,7 @@
  * 
  *		Jocelyn GENNESSEAUX (hyperjoce - French Connection - www.planetside.fr)
  * 
- *		Formulaire de création de la signature
+ *		Formulaire de crï¿½ation de la signature
  * 
  *		License : CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0/fr/legalcode)
  * 
@@ -13,7 +13,7 @@
 	include('../common/html5helper.php');
 	include('../common/formmanager.php');
 	
-	html5helper::EnTete('Formulaire de création des signatures');
+	html5helper::EnTete('Formulaire de crï¿½ation des signatures');
 	html5helper::AddCss("./style/formulaire.css");
 	html5helper::AddJavaScript("../script/oXHR.js");
 	html5helper::AddJavaScript("./script/formulaire.js");
@@ -25,7 +25,7 @@
 			<td>Pseudo :</td>
 			<td>
 				<form>
-						<input type="text" id="pseudo" name="pseudo" onChange="VerifierPseudo();"/>
+                    <input type="text" id="pseudo" name="pseudo" onChange="VerifierPseudo();"/>
 						<img id="imgChargement"	src="./image/ajax-loader.gif"	class="PictureHidden" />
 						<img id="imgOK"			src="./image/ajax-clean.png"	class="PictureHidden" />
 						<img id="imgErreur"		src="./image/ajax-erreur.png"	class="PictureHidden" />
@@ -33,19 +33,27 @@
 				</form>
 			</td>
 		</tr>
-		<tr>
-			<td>Options :</td>
-			<td>
-				<input type="checkbox" name="br" id="br" checked="checked" onChange="UpdateSignature();" /> <label for="br">BR</label>
-				<input type="checkbox" name="xp" id="xp" checked="checked" onChange="UpdateSignature();" /> <label for="xp">XP</label>
-				<input type="checkbox" name="kd" id="kd" checked="checked" onChange="UpdateSignature();" /> <label for="kd">K/D</label>
-			</td>
-		</tr>
+        <tr>
+            <td>Options :</td>
+            <td>
+                <input type="checkbox" name="br" id="br" checked="checked" onChange="UpdateSignature();" /> <label for="br">BR</label>
+                <input type="checkbox" name="xp" id="xp" checked="checked" onChange="UpdateSignature();" /> <label for="xp">XP</label>
+                <input type="checkbox" name="kd" id="kd" checked="checked" onChange="UpdateSignature();" /> <label for="kd">K/D</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Formations :</td>
+            <td>
+                Wolf :<input type="text" id="w" name="w" onChange="UpdateSignature();"/>
+                Rhino : <input type="text" id="r" name="r" onChange="UpdateSignature();"/>
+                Eagle : <input type="text" id="e" name="e" onChange="UpdateSignature();"/>
+            </td>
+        </tr>
 		<tr>
 			<td>Fond :</td>
 			<td>
 				<select id="fond" onchange="UpdateSignature();">
-					<option value="0">Aléatoire</option>
+					<option value="0">Alï¿½atoire</option>
 					<option value="1">Fond 1</option>
 					<option value="2">Fond 2</option>
 					<option value="3">Fond 3</option>
@@ -71,7 +79,7 @@
 		<textarea id="urlSignature" rows="4" cols="78"></textarea>
 	</p>
 		
-	<!-- Création du formulaire -->
+	<!-- Crï¿½ation du formulaire -->
 	</div>
 	
 <?php	
