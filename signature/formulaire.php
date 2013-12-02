@@ -1,14 +1,3 @@
-/**
- * 
- *		Jocelyn GENNESSEAUX (hyperjoce - French Connection - www.planetside.fr)
- * 
- *		Formulaire de cr�ation de la signature
- * 
- *		License : CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0/fr/legalcode)
- * 
- */
-
- 
  <?php
 	include('../common/html5helper.php');
 	include('../common/formmanager.php');
